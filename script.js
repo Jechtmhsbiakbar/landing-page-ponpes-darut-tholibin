@@ -41,12 +41,14 @@
 
   function openMenu() {
     mobileMenu.classList.add("open");
+    mobileMenu.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
     menuBtn.setAttribute("aria-expanded", "true");
   }
 
   function closeMenu() {
     mobileMenu.classList.remove("open");
+    mobileMenu.setAttribute("aria-hidden", "true");
     document.body.style.overflow = "";
     menuBtn.setAttribute("aria-expanded", "false");
   }

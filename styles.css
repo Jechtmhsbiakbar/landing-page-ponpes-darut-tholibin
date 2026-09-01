@@ -148,3 +148,23 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .lightbox-content { max-width: 92vw; max-height: 80vh; }
   .lightbox-close { top: 8px; right: 8px; color: #fff; }
 }
+
+/* Decorative underline utility
+   Usage: add class `underline-deco` to an inline element (e.g. <span>, <a>, or heading) */
+.underline-deco {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.18em;
+}
+.underline-deco::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 0.48em; /* thickness of the underline */
+  bottom: 0;
+  background: #000000; /* black underline */
+  border-radius: 4px;
+  transform: translateY(30%);
+  z-index: -1; /* place underline behind text */
+}
