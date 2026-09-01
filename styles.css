@@ -81,7 +81,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 #mobile-menu.open { transform: translateX(0); }
 .menu-link { opacity: 0; transform: translateY(14px); transition: opacity 0.45s var(--ease), transform 0.45s var(--ease); color: var(--charcoal); }
 #mobile-menu.open .menu-link { opacity: 1; transform: translateY(0); }
-.menu-link:hover, .menu-link:focus { /* color left unchanged to preserve hierarchy */ }
+
 
 /* Cards, images */
 .img-zoom { overflow: hidden; }
@@ -110,7 +110,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .program-overlay { background: linear-gradient(180deg, var(--overlay-weak) 0%, var(--overlay-strong) 100%); transition: background 0.35s var(--ease); }
 .program-card:hover .program-overlay { background: linear-gradient(180deg, rgba(6,38,27,0.14) 0%, var(--overlay-strong) 100%); }
 .program-card .font-display, .program-card p, .program-card .inline-flex { text-shadow: 0 8px 24px rgba(0,0,0,0.38); }
-.program-card:hover .font-display, .program-card:hover p, .program-card:hover .inline-flex { /* keep color inherited; rely on overlay for contrast */ }
+
 
 .parallax-img { will-change: transform; }
 .stat-num { font-variant-numeric: tabular-nums; }
@@ -123,7 +123,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 #backToTop.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
 
 .news-title { transition: color 0.35s var(--ease); }
-.group:hover .news-title, .group a:hover .news-title { /* color preserved on hover */ }
+
 
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
