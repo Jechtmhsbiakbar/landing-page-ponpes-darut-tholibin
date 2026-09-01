@@ -172,3 +172,43 @@
     });
   }
 })();
+
+/* Lightbox for program images */
+(function () {
+  var lb = document.getElementById("lightbox");
+  if (!lb) return;
+  var img = lb.querySelector(".lightbox-img");
+  var closeBtn = lb.querySelector(".lightbox-close");
+
+  function openLightbox(src, alt) {
+    img.src = src;
+    img.alt = alt || "";
+    lb.classList.add("open");
+    lb.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeLightbox() {
+    lb.classList.remove("open");
+    lb.setAttribute("aria-hidden", "true");
+    img.src = "";
+    document.body.style.overflow = "";
+  }
+
+  document.addEventListener("click", function (e) {
+    var targetImg = e.target.closest && e.target.closest(".program-card img");
+    if (targetImg) {
+      e.preventDefault();
+      openLightbox(targetImg.src, targetImg.alt);
+      return;
+    }
+
+    if (e.target.matches(".lightbox-close") || e.target.matches("[data-close]")) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeLightbox();
+  });
+})();
