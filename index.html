@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html class="light" lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pondok Pesantren Darut Tholibin — Membangun Generasi Qurani</title>
+    <meta name="description"
+        content="Pondok Pesantren Darut Tholibin: pendidikan Islam yang memadukan ilmu, iman, dan akhlak dalam lingkungan belajar yang modern dan inspiratif." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@20..48,100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#124D1C",
+                        "primary-dark": "#0B2F13",
+                        emerald: "#1F6B2A",
+                        sage: "#DDEBDD",
+                        ivory: "#FAF9F5",
+                        cream: "#F4F1E8",
+                        charcoal: "#171A17",
+                        muted: "#667067",
+                    },
+                    fontFamily: {
+                        display: ["'Playfair Display'", "serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    maxWidth: {
+                        content: "1360px",
+                    },
+                    transitionTimingFunction: {
+                        editorial: "cubic-bezier(0.22, 1, 0.36, 1)",
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="antialiased overflow-x-hidden font-sans">
+
+    <!-- ================= NAVBAR ================= -->
+    <header id="navbar" class="fixed top-0 inset-x-0 z-50">
+        <nav class="max-w-content mx-auto flex items-center justify-between px-6 md:px-10 h-20 md:h-24">
+            <a href="#top" class="font-display text-xl md:text-2xl font-semibold text-primary tracking-tight">
+                Darut Tholibin
+            </a>
+
+            <div class="hidden lg:flex items-center gap-10">
+                <a href="#top"
+                    class="nav-link text-sm text-charcoal/80 hover:text-primary transition-colors">Beranda</a>
+                <a href="#profil"
+                    class="nav-link text-sm text-charcoal/80 hover:text-primary transition-colors">Profil</a>
+                <a href="#program"
+                    class="nav-link text-sm text-charcoal/80 hover:text-primary transition-colors">Program</a>
+                <a href="#fasilitas"
+                    class="nav-link text-sm text-charcoal/80 hover:text-primary transition-colors">Fasilitas</a>
+                <a href="#kegiatan"
+                    class="nav-link text-sm text-charcoal/80 hover:text-primary transition-colors">Kegiatan</a>
+                <a href="#kontak"
+                    class="nav-link text-sm text-charcoal/80 hover:text-primary transition-colors">Kontak</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <a href="#kontak"
+                    class="hidden md:inline-flex btn-primary bg-primary text-ivory text-sm font-medium px-6 py-3 rounded-sm">
+                    Hubungi Kami
+                </a>
+                <button id="menuBtn" aria-label="Buka menu navigasi" aria-expanded="false"
+                    class="lg:hidden text-primary p-2 -mr-2">
+                    <span class="material-symbols-outlined text-[30px]">menu</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= MOBILE MENU ================= -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-ivory lg:hidden flex flex-col">
+        <div class="flex items-center justify-between px-6 h-20">
+            <span class="font-display text-xl font-semibold text-primary">Darut Tholibin</span>
+            <button id="menuCloseBtn" aria-label="Tutup menu" class="text-primary p-2">
+                <span class="material-symbols-outlined text-[30px]">close</span>
+            </button>
+        </div>
+        <nav class="flex-1 flex flex-col justify-center px-8 gap-6">
+            <a href="#top" class="menu-link font-display text-3xl text-charcoal">Beranda</a>
+            <a href="#profil" class="menu-link font-display text-3xl text-charcoal">Profil</a>
+            <a href="#program" class="menu-link font-display text-3xl text-charcoal">Program</a>
+            <a href="#fasilitas" class="menu-link font-display text-3xl text-charcoal">Fasilitas</a>
+            <a href="#kegiatan" class="menu-link font-display text-3xl text-charcoal">Kegiatan</a>
+            <a href="#kontak" class="menu-link font-display text-3xl text-charcoal">Kontak</a>
+        </nav>
+        <div class="px-8 pb-10 menu-link">
+            <a href="#kontak"
+                class="btn-primary inline-flex w-full items-center justify-center bg-primary text-ivory text-sm font-medium px-6 py-4 rounded-sm">
+                Hubungi Kami
+            </a>
+        </div>
+    </div>
+
+    <!-- ================= HERO ================= -->
+    <section id="top"
+        class="hero-seq relative min-h-[100svh] flex items-end pt-28 pb-16 md:pt-0 md:pb-0 md:items-center overflow-hidden bg-ivory">
+        <div
+            class="max-w-content mx-auto w-full px-6 md:px-10 grid md:grid-cols-12 gap-8 md:gap-6 items-center relative z-10">
+
+            <!-- left copy -->
+            <div class="md:col-span-6 lg:col-span-5 order-2 md:order-1">
+                <div class="load-item flex items-center gap-3 mb-6" data-d="1">
+                    <span class="w-8 h-px bg-primary"></span>
+                    <span class="text-xs tracking-[0.24em] uppercase text-muted font-medium">Pondok Pesantren Darut
+                        Tholibin</span>
+                </div>
+
+                <h1 class="load-item font-display h-display text-charcoal text-balance mb-6" data-d="2">
+                    Membangun Generasi <em class="italic text-primary not-italic">Qurani</em>, Berilmu, dan Berakhlak
+                    Mulia
+                </h1>
+
+                <p class="load-item h-hero-support text-muted leading-relaxed mb-9 max-w-md" data-d="3">
+                    Lingkungan pendidikan yang memadukan pembinaan akhlak, ilmu pengetahuan, dan kehidupan santri
+                    sehari-hari dalam suasana yang tenang dan inspiratif.
+                </p>
+
+                <div class="load-item flex flex-col sm:flex-row gap-4" data-d="4">
+                    <a href="#profil"
+                        class="btn-primary inline-flex items-center justify-center bg-primary text-ivory text-sm font-medium px-8 py-4 rounded-sm">
+                        Kenali Kami
+                    </a>
+                    <a href="#program"
+                        class="btn-outline inline-flex items-center justify-center border border-charcoal/20 text-charcoal text-sm font-medium px-8 py-4 rounded-sm hover:border-primary hover:text-primary">
+                        Lihat Program
+                    </a>
+                </div>
+            </div>
+
+            <!-- right image composition -->
+            <div class="md:col-span-6 lg:col-span-7 order-1 md:order-2 relative">
+                <div class="load-item hero-img-wrap relative rounded-sm overflow-hidden aspect-[4/5] md:aspect-[3/4] lg:aspect-[4/5]"
+                    data-d="2">
+                    <img class="hero-img w-full h-full object-cover"
+                        src="https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?q=80&w=1400&auto=format&fit=crop"
+                        alt="Santri berjalan di area kampus pondok pesantren yang teduh di pagi hari" width="1000"
+                        height="1250" fetchpriority="high" />
+                </div>
+
+                <!-- floating info chip -->
+                <div class="load-item absolute -bottom-6 left-4 md:left-8 bg-ivory rounded-sm shadow-xl px-6 py-5 max-w-[240px] border border-charcoal/5"
+                    data-d="5">
+                    <p class="text-xs tracking-[0.18em] uppercase text-primary font-semibold mb-1">Belajar • Beribadah •
+                        Berkarya</p>
+                    <p class="text-sm text-muted leading-snug">Pendidikan &amp; pembinaan karakter dalam satu
+                        lingkungan.</p>
+                </div>
+
+                <!-- spine label -->
+                <div class="load-item hidden lg:flex absolute top-0 -right-10 h-full items-center" data-d="6">
+                    <div class="spine flex items-center gap-3">
+                        <span>SEJAK MASA KE MASA</span>
+                        <span class="spine-dot"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- scroll indicator -->
+        <div class="load-item scroll-cue-fade absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-muted"
+            data-d="6" id="scrollCue">
+            <span class="text-[11px] tracking-[0.2em] uppercase">Scroll untuk mengenal kami</span>
+            <span class="material-symbols-outlined text-xl scroll-cue">arrow_downward</span>
+        </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="profil" class="py-24 md:py-36 px-6 md:px-10 bg-ivory">
+        <div class="max-w-content mx-auto grid md:grid-cols-12 gap-10 md:gap-6 items-start">
+
+            <!-- images -->
+            <div class="md:col-span-6 relative" data-reveal="scale">
+                <div class="img-zoom rounded-sm overflow-hidden aspect-[4/5]">
+                    <img class="w-full h-full object-cover" loading="lazy"
+                        src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=1200&auto=format&fit=crop"
+                        alt="Santri belajar bersama di dalam ruang kelas" width="900" height="1125" />
+                </div>
+                <div
+                    class="img-zoom absolute -bottom-10 -right-6 md:-right-10 w-2/5 rounded-sm overflow-hidden aspect-square shadow-xl border-4 border-ivory">
+                    <img class="w-full h-full object-cover" loading="lazy"
+                        src="https://images.unsplash.com/photo-1584286595398-a59511e17dcd?q=80&w=800&auto=format&fit=crop"
+                        alt="Mushaf Al-Qur'an terbuka di atas meja belajar" width="500" height="500" />
+                </div>
+            </div>
+
+            <!-- copy -->
+            <div class="md:col-span-6 md:col-start-7 md:pl-4 lg:pl-10 pt-4 md:pt-16">
+                <div class="flex items-center gap-3 mb-6" data-reveal>
+                    <span class="w-8 h-px bg-primary"></span>
+                    <span class="text-xs tracking-[0.24em] uppercase text-muted font-medium">Tentang Kami</span>
+                </div>
+                <h2 class="font-display h-section text-charcoal mb-6" data-reveal>
+                    Tempat Bertumbuhnya Ilmu, Iman, dan Karakter
+                </h2>
+                <p class="text-muted leading-relaxed mb-5" data-reveal>
+                    Pondok Pesantren Darut Tholibin merupakan lingkungan pendidikan yang mengintegrasikan pembelajaran,
+                    pembinaan akhlak, dan kehidupan santri dalam suasana yang nyaman dan inspiratif.
+                </p>
+                <p class="text-muted leading-relaxed mb-9" data-reveal>
+                    Kami percaya bahwa ilmu yang baik tumbuh dari lingkungan yang membentuk kebiasaan, kedisiplinan, dan
+                    keteladanan — bukan sekadar ruang kelas, melainkan cara hidup sehari-hari.
+                </p>
+
+                <div class="grid grid-cols-2 gap-6 mb-9 pt-6 border-t border-charcoal/10" data-reveal>
+                    <div>
+                        <p class="font-display text-2xl text-primary mb-1">Integritas</p>
+                        <p class="text-sm text-muted">Kejujuran sebagai landasan setiap tindakan.</p>
+                    </div>
+                    <div>
+                        <p class="font-display text-2xl text-primary mb-1">Kemandirian</p>
+                        <p class="text-sm text-muted">Membentuk santri yang tangguh dan bertanggung jawab.</p>
+                    </div>
+                </div>
+
+                <a href="#program" class="group inline-flex items-center gap-2 text-primary font-medium text-sm"
+                    data-reveal>
+                    Selengkapnya
+                    <span class="material-symbols-outlined text-lg arrow-move">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= VALUES (numbered editorial rows) ================= -->
+    <section class="py-20 md:py-28 px-6 md:px-10 bg-cream">
+        <div class="max-w-content mx-auto">
+            <div class="mb-14 max-w-xl" data-reveal>
+                <span class="text-xs tracking-[0.24em] uppercase text-muted font-medium">Landasan Kami</span>
+                <h2 class="font-display h-sub text-charcoal mt-4">Empat hal yang membentuk cara kami mendidik</h2>
+            </div>
+
+            <div>
+                <div class="value-row grid grid-cols-12 items-center py-7 md:py-9 px-2" data-reveal>
+                    <span
+                        class="value-num col-span-2 md:col-span-1 font-display text-2xl md:text-3xl text-charcoal/30">01</span>
+                    <span
+                        class="value-title col-span-6 md:col-span-4 font-display text-xl md:text-2xl text-charcoal">Pendidikan
+                        Islam</span>
+                    <span class="hidden md:block md:col-span-6 text-sm text-muted">Kurikulum yang mengintegrasikan
+                        tahfidz Al-Qur'an dengan pemahaman kitab kuning.</span>
+                    <span
+                        class="material-symbols-outlined col-span-4 md:col-span-1 justify-self-end text-charcoal/40">arrow_outward</span>
+                </div>
+                <div class="value-row grid grid-cols-12 items-center py-7 md:py-9 px-2" data-reveal>
+                    <span
+                        class="value-num col-span-2 md:col-span-1 font-display text-2xl md:text-3xl text-charcoal/30">02</span>
+                    <span
+                        class="value-title col-span-6 md:col-span-4 font-display text-xl md:text-2xl text-charcoal">Pembinaan
+                        Akhlak</span>
+                    <span class="hidden md:block md:col-span-6 text-sm text-muted">Menanamkan akhlakul karimah dan
+                        kepemimpinan yang islami dalam keseharian.</span>
+                    <span
+                        class="material-symbols-outlined col-span-4 md:col-span-1 justify-self-end text-charcoal/40">arrow_outward</span>
+                </div>
+                <div class="value-row grid grid-cols-12 items-center py-7 md:py-9 px-2" data-reveal>
+                    <span
+                        class="value-num col-span-2 md:col-span-1 font-display text-2xl md:text-3xl text-charcoal/30">03</span>
+                    <span
+                        class="value-title col-span-6 md:col-span-4 font-display text-xl md:text-2xl text-charcoal">Pengembangan
+                        Potensi</span>
+                    <span class="hidden md:block md:col-span-6 text-sm text-muted">Ruang bagi santri untuk mengasah
+                        minat, bakat, dan kepercayaan diri.</span>
+                    <span
+                        class="material-symbols-outlined col-span-4 md:col-span-1 justify-self-end text-charcoal/40">arrow_outward</span>
+                </div>
+                <div class="value-row grid grid-cols-12 items-center py-7 md:py-9 px-2" data-reveal>
+                    <span
+                        class="value-num col-span-2 md:col-span-1 font-display text-2xl md:text-3xl text-charcoal/30">04</span>
+                    <span
+                        class="value-title col-span-6 md:col-span-4 font-display text-xl md:text-2xl text-charcoal">Lingkungan
+                        Positif</span>
+                    <span class="hidden md:block md:col-span-6 text-sm text-muted">Suasana asrama dan belajar yang
+                        menumbuhkan rasa aman dan persaudaraan.</span>
+                    <span
+                        class="material-symbols-outlined col-span-4 md:col-span-1 justify-self-end text-charcoal/40">arrow_outward</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PROGRAMS ================= -->
+    <section id="program" class="py-24 md:py-36 px-6 md:px-10 bg-ivory">
+        <div class="max-w-content mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14" data-reveal>
+                <h2 class="font-display h-section text-charcoal max-w-xl">Belajar dengan Nilai, Bertumbuh dengan Makna
+                </h2>
+                <p class="text-muted max-w-sm">Program terstruktur yang menyeimbangkan ilmu agama, akademik formal, dan
+                    pengembangan diri.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <a href="#"
+                    class="program-card group img-zoom relative rounded-sm overflow-hidden aspect-[4/5] card-lift"
+                    data-reveal>
+                    <img class="w-full h-full object-cover" loading="lazy"
+                        src="https://images.unsplash.com/photo-1609599006353-e629aaabfeae?q=80&w=1200&auto=format&fit=crop"
+                        alt="Santri menghafal Al-Qur'an" width="900" height="1125" />
+                    <div class="program-overlay absolute inset-0"></div>
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end text-ivory">
+                        <span class="font-display text-sm opacity-80 mb-2">01</span>
+                        <h3 class="font-display text-2xl mb-2">Tahfidz Al-Qur'an</h3>
+                        <p class="text-sm text-ivory/80 mb-4 max-w-xs">Program menghafal Al-Qur'an dengan metode
+                            intensif dan bimbingan musyrif berpengalaman.</p>
+                        <span class="inline-flex items-center gap-2 text-sm font-medium">Pelajari lebih lanjut <span
+                                class="material-symbols-outlined text-base arrow-move">arrow_forward</span></span>
+                    </div>
+                </a>
+
+                <a href="#"
+                    class="program-card group img-zoom relative rounded-sm overflow-hidden aspect-[4/5] card-lift"
+                    data-reveal data-reveal-delay="1">
+                    <img class="w-full h-full object-cover" loading="lazy"
+                        src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=1200&auto=format&fit=crop"
+                        alt="Santri mengikuti kegiatan belajar di madrasah formal" width="900" height="1125" />
+                    <div class="program-overlay absolute inset-0"></div>
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end text-ivory">
+                        <span class="font-display text-sm opacity-80 mb-2">02</span>
+                        <h3 class="font-display text-2xl mb-2">Madrasah Formal</h3>
+                        <p class="text-sm text-ivory/80 mb-4 max-w-xs">Pendidikan tingkat MTs dan MA yang memadukan ilmu
+                            agama dan ilmu umum.</p>
+                        <span class="inline-flex items-center gap-2 text-sm font-medium">Pelajari lebih lanjut <span
+                                class="material-symbols-outlined text-base arrow-move">arrow_forward</span></span>
+                    </div>
+                </a>
+
+                <a href="#"
+                    class="program-card group img-zoom relative rounded-sm overflow-hidden aspect-[4/5] card-lift"
+                    data-reveal data-reveal-delay="2">
+                    <img class="w-full h-full object-cover" loading="lazy"
+                        src="https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?q=80&w=1200&auto=format&fit=crop"
+                        alt="Kajian kitab kuning bersama santri" width="900" height="1125" />
+                    <div class="program-overlay absolute inset-0"></div>
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end text-ivory">
+                        <span class="font-display text-sm opacity-80 mb-2">03</span>
+                        <h3 class="font-display text-2xl mb-2">Kajian Kitab Kuning</h3>
+                        <p class="text-sm text-ivory/80 mb-4 max-w-xs">Pendalaman ilmu-ilmu keislaman klasik melalui
+                            kajian turats ulama salaf.</p>
+                        <span class="inline-flex items-center gap-2 text-sm font-medium">Pelajari lebih lanjut <span
+                                class="material-symbols-outlined text-base arrow-move">arrow_forward</span></span>
+                    </div>
+                </a>
+
+                <a href="#"
+                    class="program-card group img-zoom relative rounded-sm overflow-hidden aspect-[4/5] card-lift"
+                    data-reveal data-reveal-delay="3">
+                    <img class="w-full h-full object-cover" loading="lazy"
+                        src="https://images.unsplash.com/photo-1522661067900-ab829854a57f?q=80&w=1200&auto=format&fit=crop"
+                        alt="Santri mengikuti kegiatan ekstrakurikuler" width="900" height="1125" />
+                    <div class="program-overlay absolute inset-0"></div>
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end text-ivory">
+                        <span class="font-display text-sm opacity-80 mb-2">04</span>
+                        <h3 class="font-display text-2xl mb-2">Pengembangan Potensi</h3>
+                        <p class="text-sm text-ivory/80 mb-4 max-w-xs">Kaligrafi, qiro'ah, bela diri, jurnalistik, dan
+                            bahasa asing untuk mengasah soft skill.</p>
+                        <span class="inline-flex items-center gap-2 text-sm font-medium">Pelajari lebih lanjut <span
+                                class="material-symbols-outlined text-base arrow-move">arrow_forward</span></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= IMAGE BREAK / PARALLAX ================= -->
+    <section class="relative h-[70vh] min-h-[420px] overflow-hidden">
+        <div class="absolute inset-0" id="parallaxWrap">
+            <img id="parallaxImg" class="parallax-img w-full h-[130%] object-cover -translate-y-[8%]"
+                src="https://images.unsplash.com/photo-1519452575417-564c1401ecc0?q=80&w=1800&auto=format&fit=crop"
+                alt="Suasana masjid pondok pesantren saat pagi hari" loading="lazy" />
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-primary-dark/70 via-primary-dark/20 to-transparent"></div>
+        <div class="relative h-full max-w-content mx-auto px-6 md:px-10 flex items-end pb-16">
+            <p class="font-display text-2xl md:text-4xl text-ivory max-w-lg leading-snug" data-reveal>
+                Menjadi ruang untuk belajar, beribadah, dan bertumbuh.
+            </p>
+        </div>
+    </section>
+
+    <!-- ================= FACILITIES ================= -->
+    <section id="fasilitas" class="py-24 md:py-36 px-6 md:px-10 bg-ivory">
+        <div class="max-w-content mx-auto">
+            <div class="mb-14 max-w-xl" data-reveal>
+                <span class="text-xs tracking-[0.24em] uppercase text-muted font-medium">Fasilitas</span>
+                <h2 class="font-display h-section text-charcoal mt-4">Infrastruktur yang Mendukung Kehidupan Santri</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-6 md:grid-rows-2 gap-4 md:h-[640px]">
+                <div class="img-zoom relative rounded-sm overflow-hidden md:col-span-4 md:row-span-2 aspect-[4/3] md:aspect-auto"
+                    data-reveal>
+                    <img class="w-full h-full object-cover" loading="lazy"
+                        src="https://images.unsplash.com/photo-1519452575417-564c1401ecc0?q=80&w=1400&auto=format&fit=crop"
+                        alt="Masjid Jami' pondok pesantren" width="1000" height="800" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent flex items-end p-6">
+                        <p class="text-ivory font-display text-xl">Masjid Jami'</p>
+                    </div>
+                </div>
+                <div class="img-zoom relative rounded-sm overflow-hidden md:col-span-2 aspect-[4/3] md:aspect-auto"
+                    data-reveal data-reveal-delay="1">
+                    <img class="w-full h-full object-cover" loading="lazy"
+                        src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=900&auto=format&fit=crop"
+                        alt="Ruang kelas untuk kegiatan belajar mengajar" width="700" height="500" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent flex items-end p-6">
+                        <p class="text-ivory font-display text-lg">Ruang Kelas</p>
+                    </div>
+                </div>
+                <div class="img-zoom relative rounded-sm overflow-hidden md:col-span-2 aspect-[4/3] md:aspect-auto"
+                    data-reveal data-reveal-delay="2">
+                    <img class="w-full h-full object-cover" loading="lazy"
+                        src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=900&auto=format&fit=crop"
+                        alt="Perpustakaan digital pondok pesantren" width="700" height="500" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent flex items-end p-6">
+                        <p class="text-ivory font-display text-lg">Perpustakaan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ACTIVITIES / KEHIDUPAN SANTRI ================= -->
+    <section id="kegiatan" class="py-24 md:py-36 px-6 md:px-10 bg-cream">
+        <div class="max-w-content mx-auto">
+            <div class="mb-16 max-w-xl" data-reveal>
+                <span class="text-xs tracking-[0.24em] uppercase text-muted font-medium">Keseharian</span>
+                <h2 class="font-display h-section text-charcoal mt-4">Kehidupan Santri</h2>
+                <p class="text-muted mt-4 leading-relaxed">Dinamika keseharian yang menyeimbangkan spiritualitas,
+                    intelektualitas, dan kebersamaan.</p>
+            </div>
+
+            <div class="space-y-20 md:space-y-28">
+                <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                    <div class="img-zoom rounded-sm overflow-hidden aspect-[4/3]" data-reveal>
+                        <img class="w-full h-full object-cover" loading="lazy"
+                            src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop"
+                            alt="Santri belajar dan berdiskusi kelompok" width="900" height="675" />
+                    </div>
+                    <div data-reveal data-reveal-delay="1">
+                        <span class="font-display text-3xl text-charcoal/20">01</span>
+                        <h3 class="font-display h-sub text-charcoal mt-3 mb-4">Suasana Belajar Kondusif</h3>
+                        <p class="text-muted leading-relaxed max-w-md">Ruang kelas dan perpustakaan dirancang untuk
+                            mendukung konsentrasi tinggi. Diskusi kelompok dan halaqoh menjadi rutinitas yang mengasah
+                            ketajaman berpikir santri.</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                    <div class="md:order-2 img-zoom rounded-sm overflow-hidden aspect-[4/3]" data-reveal>
+                        <img class="w-full h-full object-cover" loading="lazy"
+                            src="https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?q=80&w=1200&auto=format&fit=crop"
+                            alt="Santri melaksanakan shalat berjamaah di masjid" width="900" height="675" />
+                    </div>
+                    <div class="md:order-1" data-reveal data-reveal-delay="1">
+                        <span class="font-display text-3xl text-charcoal/20">02</span>
+                        <h3 class="font-display h-sub text-charcoal mt-3 mb-4">Pembinaan Spiritual &amp; Ibadah</h3>
+                        <p class="text-muted leading-relaxed max-w-md">Masjid menjadi pusat kegiatan pondok. Shalat
+                            berjamaah, qiyamullail, dan zikir bersama membentuk ketangguhan ruhiyah santri dalam
+                            menghadapi tantangan zaman.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= STATISTICS ================= -->
+    <section class="py-20 md:py-24 px-6 md:px-10 bg-primary text-ivory">
+        <div class="max-w-content mx-auto grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8 text-center md:text-left">
+            <div data-reveal>
+                <div class="stat-num font-display text-4xl md:text-5xl mb-2" data-count="800" data-suffix="+">0</div>
+                <div class="text-xs tracking-[0.2em] uppercase text-ivory/70">Santri Aktif</div>
+            </div>
+            <div data-reveal data-reveal-delay="1">
+                <div class="stat-num font-display text-4xl md:text-5xl mb-2" data-count="35" data-suffix="+">0</div>
+                <div class="text-xs tracking-[0.2em] uppercase text-ivory/70">Tenaga Pengajar</div>
+            </div>
+            <div data-reveal data-reveal-delay="2">
+                <div class="stat-num font-display text-4xl md:text-5xl mb-2" data-count="15" data-suffix="+">0</div>
+                <div class="text-xs tracking-[0.2em] uppercase text-ivory/70">Program Pilihan</div>
+            </div>
+            <div data-reveal data-reveal-delay="3">
+                <div class="stat-num font-display text-4xl md:text-5xl mb-2" data-count="20" data-suffix="+">0</div>
+                <div class="text-xs tracking-[0.2em] uppercase text-ivory/70">Tahun Pengabdian</div>
+            </div>
+        </div>
+        <p class="max-w-content mx-auto px-0 mt-8 text-xs text-ivory/50">*Angka bersifat contoh dan dapat disesuaikan
+            dengan data resmi pondok pesantren.</p>
+    </section>
+
+    <!-- ================= NEWS / INFORMATION ================= -->
+    <section class="py-24 md:py-36 px-6 md:px-10 bg-ivory">
+        <div class="max-w-content mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14" data-reveal>
+                <h2 class="font-display h-section text-charcoal max-w-xl">Berita &amp; Informasi</h2>
+                <a href="#" class="group inline-flex items-center gap-2 text-primary text-sm font-medium">
+                    Lihat semua berita <span class="material-symbols-outlined text-lg arrow-move">arrow_forward</span>
+                </a>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <a href="#" class="group" data-reveal>
+                    <div class="img-zoom rounded-sm overflow-hidden aspect-[4/3] mb-5">
+                        <img class="w-full h-full object-cover" loading="lazy"
+                            src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=900&auto=format&fit=crop"
+                            alt="Kegiatan wisuda tahfidz santri" width="700" height="525" />
+                    </div>
+                    <span class="text-xs tracking-[0.2em] uppercase text-primary font-medium">Kegiatan</span>
+                    <h3 class="news-title font-display text-xl text-charcoal mt-2 mb-2">Wisuda Tahfidz Angkatan Terbaru
+                        Digelar Khidmat</h3>
+                    <p class="text-sm text-muted leading-relaxed">Momen kelulusan santri penghafal Al-Qur'an dirayakan
+                        bersama keluarga besar pondok.</p>
+                </a>
+                <a href="#" class="group" data-reveal data-reveal-delay="1">
+                    <div class="img-zoom rounded-sm overflow-hidden aspect-[4/3] mb-5">
+                        <img class="w-full h-full object-cover" loading="lazy"
+                            src="https://images.unsplash.com/photo-1522661067900-ab829854a57f?q=80&w=900&auto=format&fit=crop"
+                            alt="Kegiatan pembelajaran kelas madrasah" width="700" height="525" />
+                    </div>
+                    <span class="text-xs tracking-[0.2em] uppercase text-primary font-medium">Pendidikan</span>
+                    <h3 class="news-title font-display text-xl text-charcoal mt-2 mb-2">Kurikulum Terpadu Diperbarui
+                        untuk Tahun Ajaran Baru</h3>
+                    <p class="text-sm text-muted leading-relaxed">Penyesuaian materi ajar dilakukan demi keseimbangan
+                        ilmu agama dan umum.</p>
+                </a>
+                <a href="#" class="group" data-reveal data-reveal-delay="2">
+                    <div class="img-zoom rounded-sm overflow-hidden aspect-[4/3] mb-5">
+                        <img class="w-full h-full object-cover" loading="lazy"
+                            src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=900&auto=format&fit=crop"
+                            alt="Suasana kampus pondok pesantren yang asri" width="700" height="525" />
+                    </div>
+                    <span class="text-xs tracking-[0.2em] uppercase text-primary font-medium">Pengumuman</span>
+                    <h3 class="news-title font-display text-xl text-charcoal mt-2 mb-2">Pendaftaran Santri Baru Resmi
+                        Dibuka</h3>
+                    <p class="text-sm text-muted leading-relaxed">Informasi lengkap jalur pendaftaran dan berkas yang
+                        perlu disiapkan calon santri.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FINAL CTA ================= -->
+    <section id="kontak" class="relative py-28 md:py-36 px-6 md:px-10 bg-primary-dark text-ivory overflow-hidden">
+        <div class="absolute inset-0 opacity-[0.14]">
+            <img class="w-full h-full object-cover" loading="lazy"
+                src="https://images.unsplash.com/photo-1519452575417-564c1401ecc0?q=80&w=1800&auto=format&fit=crop"
+                alt="" />
+        </div>
+        <div class="relative max-w-2xl mx-auto text-center" data-reveal>
+            <h2 class="font-display h-section mb-6 text-balance">Menjadi Bagian dari Perjalanan Darut Tholibin</h2>
+            <p class="text-ivory/75 leading-relaxed mb-10 max-w-xl mx-auto">Mari wujudkan cita-cita mencetak generasi
+                berilmu dan berakhlak bersama kami. Pendaftaran santri baru kini telah dibuka.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:+6281234567890"
+                    class="btn-primary inline-flex items-center justify-center bg-ivory text-primary-dark text-sm font-medium px-8 py-4 rounded-sm hover:bg-sage">
+                    Hubungi Kami
+                </a>
+                <a href="#"
+                    class="inline-flex items-center justify-center border border-ivory/30 text-ivory text-sm font-medium px-8 py-4 rounded-sm hover:bg-ivory/10 transition-colors">
+                    Lihat Lokasi
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-cream">
+        <div class="max-w-content mx-auto px-6 md:px-10 py-20 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div class="md:col-span-1">
+                <p class="font-display text-xl font-semibold text-primary mb-4">Darut Tholibin</p>
+                <p class="text-sm text-muted leading-relaxed max-w-xs">Mendidik dengan hikmah, membangun generasi Qurani
+                    — pendidikan Islam untuk mencetak pemimpin masa depan.</p>
+            </div>
+            <div>
+                <p class="text-xs tracking-[0.2em] uppercase text-charcoal/60 font-medium mb-5">Tautan Cepat</p>
+                <div class="flex flex-col gap-3 text-sm text-muted">
+                    <a href="#profil" class="hover:text-primary transition-colors w-fit">Profil</a>
+                    <a href="#program" class="hover:text-primary transition-colors w-fit">Program</a>
+                    <a href="#fasilitas" class="hover:text-primary transition-colors w-fit">Fasilitas</a>
+                    <a href="#kegiatan" class="hover:text-primary transition-colors w-fit">Kegiatan</a>
+                </div>
+            </div>
+            <div>
+                <p class="text-xs tracking-[0.2em] uppercase text-charcoal/60 font-medium mb-5">Bantuan</p>
+                <div class="flex flex-col gap-3 text-sm text-muted">
+                    <a href="#kontak" class="hover:text-primary transition-colors w-fit">Kontak</a>
+                    <a href="#" class="hover:text-primary transition-colors w-fit">Kebijakan Privasi</a>
+                    <a href="#" class="hover:text-primary transition-colors w-fit">Syarat &amp; Ketentuan</a>
+                </div>
+            </div>
+            <div>
+                <p class="text-xs tracking-[0.2em] uppercase text-charcoal/60 font-medium mb-5">Hubungi Kami</p>
+                <div class="flex flex-col gap-3 text-sm text-muted">
+                    <p class="flex items-start gap-2"><span
+                            class="material-symbols-outlined text-lg text-primary">location_on</span><span>Jl. Pesantren
+                            No. 1, Desa Mulia, Jawa Barat, Indonesia</span></p>
+                    <p class="flex items-center gap-2"><span
+                            class="material-symbols-outlined text-lg text-primary">call</span><span>+62 812 3456
+                            7890</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-charcoal/10 px-6 md:px-10 py-6">
+            <p class="max-w-content mx-auto text-xs text-muted">© 2024 Pondok Pesantren Darut Tholibin. Mendidik dengan
+                Hikmah, Membangun Generasi Qur'ani.</p>
+        </div>
+    </footer>
+
+    <!-- back to top -->
+    <button id="backToTop" aria-label="Kembali ke atas"
+        class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-primary text-ivory flex items-center justify-center shadow-lg hover:bg-primary-dark transition-colors">
+        <span class="material-symbols-outlined">arrow_upward</span>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
